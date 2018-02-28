@@ -53,7 +53,7 @@ Example `Employment` json:
 
 ```js
 {
-  "id": 1337,             // Id of Position
+  "id": 1337,             // Id of Employment
   "user_id": 4711,        // Id of User
   "company_id": 54,       // Id of Company
   "is_employee": true,    // Is the employment an employee?

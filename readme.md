@@ -10,7 +10,7 @@ The authentication token can be aquired by two ways:
 
   where `email` and `passord` are the credentials to log into shyftplan
   The response contains the Authentication token
-  ```json
+  ```js
   {
     "success": true,
     "info": "Logged in",
@@ -23,7 +23,7 @@ Any read list action is paginated with the params `page` (page number)  and `per
 
 This is how the response of most list actions looks like:
 
-```json
+```js
 {
   "items": [
     ...
@@ -42,7 +42,7 @@ Every `User` in a `Company` has an `Employment`. It contains the name on the Emp
 
 Example `Employment` json:
 
-```json
+```js
 {
   "id": 1337,             // Id of Position
   "user_id": 4711,        // Id of User
@@ -70,7 +70,7 @@ Every `Company` can have multiple `Position`s.
 
 Example `Position` json:
 
-```json
+```js
 {
   "id": 1337,             // Id of Position
   "company_id": 54,       // Id of Company
@@ -96,7 +96,7 @@ Every `Company` can have multiple `Location`s.
 
 Example `Location` json:
 
-```json
+```js
 {
   "id": 1337,             // Id of Location
   "company_id": 54,       // Id of Company
@@ -118,7 +118,7 @@ Example `Location` json:
 
 Example `LocationsPosition` json:
 
-```json
+```js
 {
   "id": 1337,             // Id of LocationsPosition
   "location_id": 4711,    // Id of Location
@@ -141,7 +141,7 @@ This defines on which positions and locations an employee is able to work.
 
 Example `EmploymentsPosition` json:
 
-```json
+```js
 {
   "id": 1337,             // Id of EmploymentsPosition
   "employment_id": 4711,  // Id of Employment
@@ -161,7 +161,7 @@ A shiftplan contains a collections of `Shift`s assigned to it and is related to 
 
 Example `Shiftplan` json:
 
-```json
+```js
 {
   "id": 1337,             // Id of Shiftplan
   "location_id": 58,      // Id of Location
@@ -185,7 +185,7 @@ Please note: The assigned position is set by the `LocationsPosition` where the `
 
 Example `Shift` json:
 
-```json
+```js
 {
   "id": 1337,             // Id of Shift
   "shiftplan_id": 4711,   // Id of Shiftplan
@@ -215,7 +215,7 @@ Please note: The assigned position is set by the `LocationsPosition` where the `
 
 Example `StaffShift` json:
 
-```json
+```js
 {
   "id": 1337,             // Id of StaffShift
   "shift_id": 4711,       // Id of Shift
@@ -246,7 +246,7 @@ If an employee is currently assigned to a shift he can request a change.
 
 Example `Request` json:
 
-```json
+```js
 {
   "id": 1337,             // Id of Request
   "shift_id": 4711,       // Id of Shift
@@ -267,7 +267,7 @@ Please note: Payments can be included for the `Evaluation` response. This decrea
 
 Example `Evaluation` json:
 
-```json
+```js
 {
   "id": 1337,             // Id of StaffShift
   "shift_id": 4711,       // Id of Shift

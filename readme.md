@@ -8,7 +8,8 @@ The email is the one used for signing in into shyftplan. It is recommended to cr
 The authentication token can be aquired by two ways:
 
 - Create an Authentication Token for your current employment on your Profile
-- [POST] <https://shyftplan.com/api/v1/login?user[email]=email&user[password]=password>
+- <https://shyftplan.com/swagger#!/login>
+  [POST] <https://shyftplan.com/api/v1/login?user[email]=email&user[password]=password>
 
   where `email` and `passord` are the credentials to log into shyftplan
   The response contains the Authentication token

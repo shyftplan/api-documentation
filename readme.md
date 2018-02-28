@@ -1,5 +1,7 @@
 # shyftplan API documentation
 
+All available REST API urls and parameters are listed and described at <https://shyftplan.com/swagger>.
+
 Every API call needs authentication with the params `user_email` and `authentication_token`.
 The email is the one used for signing in into shyftplan. It is recommended to create a separate Login for using the API.
 
@@ -19,6 +21,8 @@ The authentication token can be aquired by two ways:
   }
   ```
 
+## List Actions
+
 Any read list action is paginated with the params `page` (page number)  and `per_page` (amount of records per page). The default page size is `1000` for most of the actions.
 
 This is how the response of most list actions looks like:
@@ -31,6 +35,9 @@ This is how the response of most list actions looks like:
   "total": 1337
 }
 ```
+
+Some list actions allow an Array of parameters (for example `ids` at [Shifts](https://shyftplan.com/swagger#!/shifts/getApiV1Shifts)).
+That parameters can't be passed by the swagger UI. If you want to use them you need to pass them like `?ids[]=1&ids[]=2&ids[]=3`
 
 ## Employment
 
